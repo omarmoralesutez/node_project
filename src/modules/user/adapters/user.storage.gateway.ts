@@ -15,8 +15,11 @@ export class UserStorageGateway implements IUserRepository {
     findById(id: number): Promise<TUser> {
         throw new Error("Method not implemented.");
     }
-    save(user: TUser): Promise<boolean> {
-        throw new Error("Method not implemented.");
+    async save(user: TUser): Promise<boolean> {
+        const query = 'INSERT INTO users(username, password, status_id, person_id) VALUES (?,?,?,?)';
+        const response =  await pool.query(query, Object.values(user));
+
+       
     }
     update(user: TUser): Promise<boolean> {
         throw new Error("Method not implemented.");
