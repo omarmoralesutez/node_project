@@ -14,4 +14,4 @@ const config: Pool.Config<Client> = {
     maxUses: 7500, 
 }
 
-const pool = new Pool(config);
+export const pool = new Pool(config);

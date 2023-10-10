@@ -1,4 +1,4 @@
-import { Entity } from "../../../kernel/types";
+import { Entity, TStatus } from "../../../kernel/types";
 
 export type TUser = Entity<number> &{
     username: string;
